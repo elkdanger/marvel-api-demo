@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './Search.css'
+import api from './api'
 
 export default class SearchComponent extends React.Component {
   constructor() {
@@ -15,7 +16,7 @@ export default class SearchComponent extends React.Component {
     evt.preventDefault()
 
     if (this.state.isValid) {
-      console.log('Searching characters..')
+      api.searchCharacters(this.state.searchTerm)
     }
   }
 
