@@ -1,5 +1,5 @@
 import * as React from 'react'
-import logo from './marvel.png'
+import logo from './img/marvel.png'
 import './App.css'
 import Search from './Search'
 
