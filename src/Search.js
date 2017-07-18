@@ -1,10 +1,17 @@
 import * as React from 'react'
+import { connect } from 'react-redux'
 import './Search.css'
-import api from './api'
+import { Actions } from './data/actions'
 
-export default class SearchComponent extends React.Component {
-  constructor() {
-    super()
+const mapDispatchToProps = dispatch => {
+  return {
+    doSearch: name => Actions.doSearch(name)(dispatch)
+  }
+}
+
+export class SearchComponent extends React.Component {
+  constructor(props) {
+    super(props)
     this.state = {
       isValid: false,
       isDirty: false,
@@ -16,7 +23,7 @@ export default class SearchComponent extends React.Component {
     evt.preventDefault()
 
     if (this.state.isValid) {
-      api.searchCharacters(this.state.searchTerm)
+      this.props.doSearch(this.state.searchTerm)
     }
   }
 
@@ -50,3 +57,5 @@ export default class SearchComponent extends React.Component {
     )
   }
 }
+
+export default connect(undefined, mapDispatchToProps)(SearchComponent)

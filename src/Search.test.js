@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { shallow } from 'enzyme'
-import SearchComponent from './Search'
+import { SearchComponent } from './Search'
 
 it('can render the component', () => {
   const component = shallow(<SearchComponent />)

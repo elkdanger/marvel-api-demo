@@ -6,9 +6,7 @@ const Api = {
     const url = `${baseUrl}${characterPath}?apikey=${process.env
       .REACT_APP_API_KEY}&nameStartsWith=${name}`
     const response = await fetch(url)
-    const json = await response.json()
-
-    console.log(json)
+    return await response.json()
   }
 }
 
