@@ -10,13 +10,22 @@ export default class SearchComponent extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmitForm}>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Search for characters"
-        />
-      </form>
+      <div id="search">
+        <form onSubmit={this.onSubmitForm}>
+          <div className="input-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search for characters"
+            />
+            <span className="input-group-btn">
+              <button className="btn btn-primary" type="submit">
+                <span className="glyphicon glyphicon-search" />
+              </button>
+            </span>
+          </div>
+        </form>
+      </div>
     )
   }
 }
