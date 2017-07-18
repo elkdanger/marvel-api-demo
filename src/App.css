@@ -3,15 +3,17 @@
 }
 
 .header img {
-  width: 100px;
+  width: 30%;
   margin-right: 10px;
+  display: inline-block;
 }
 
 .header h1 {
   vertical-align: bottom;
-  font-size: 140%;
+  font-size: 120%;
   margin: 5px 0 0 0;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 /* https://www.drupal.org/docs/7/creating-accessible-themes/hide-content-properly */
@@ -22,4 +24,10 @@
   height: 1px;
   width: 1px;
   word-wrap: normal;
+}
+
+@media (max-width: 337px) {
+  .header img {
+    width: 25%;
+  }
 }
