@@ -2,9 +2,29 @@ import * as React from 'react'
 import './Search.css'
 
 export default class SearchComponent extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      isValid: false,
+      isDirty: false,
+      searchTerm: ''
+    }
+  }
+
   onSubmitForm = evt => {
     evt.preventDefault()
-    console.log('Searching characters..')
+
+    if (this.state.isValid) {
+      console.log('Searching characters..')
+    }
+  }
+
+  onInputChanged = evt => {
+    this.setState({
+      searchTerm: evt.currentTarget.value,
+      isDirty: true,
+      isValid: evt.currentTarget.value !== ''
+    })
   }
 
   render() {
@@ -16,6 +36,7 @@ export default class SearchComponent extends React.Component {
               type="text"
               className="form-control"
               placeholder="Search for characters"
+              onChange={this.onInputChanged}
             />
             <span className="input-group-btn">
               <button className="btn btn-primary" type="submit">
