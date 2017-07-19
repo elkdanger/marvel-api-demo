@@ -33,6 +33,13 @@
   display: inline-block;
 }
 
+.intro-text {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 110%;
+  opacity: .5;
+}
+
 @media (max-width: 337px) {
   .header img {
     width: 25%;

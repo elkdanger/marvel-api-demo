@@ -8,7 +8,8 @@ import ResultSummary from './ResultSummary'
 import Spinner from 'react-spinkit'
 
 const mapStateToProps = state => ({
-  isLoading: state.isLoading
+  isLoading: state.isLoading,
+  isNew: state.resultInfo.total === undefined
 })
 
 class App extends React.Component {
@@ -30,6 +31,10 @@ class App extends React.Component {
         </div>
         <div className="row">
           <div className="col-sm-12">
+            {this.props.isNew &&
+              <div className="intro-text">
+                Type a character name into the box above to get started!
+              </div>}
             <ResultSummary />
             <SearchResults />
           </div>
