@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import store from './data/store'
 import './App.css'
 import Search from './Search'
+import SearchResuls from './SearchResults'
 
 export class App extends React.Component {
   render() {
@@ -21,6 +22,9 @@ export class App extends React.Component {
             <div className="col-sm-5">
               <Search />
             </div>
+          </div>
+          <div className="row">
+            <SearchResuls />
           </div>
         </div>
       </Provider>
