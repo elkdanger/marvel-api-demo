@@ -8,6 +8,17 @@ export const searchResultsReducer = (state = [], action) => {
   return state
 }
 
+const resultInfoReducer = (state = {}, action) => {
+  if (action.type === Constants.RESULTS_LOADED) {
+    return {
+      count: action.data.count,
+      total: action.data.total,
+      limit: action.data.limit
+    }
+  }
+  return state
+}
+
 const isLoadingReducer = (state = false, action) => {
   if (action && action.type == Constants.LOADING_INDICATOR) {
     return action.isLoading
@@ -18,5 +29,6 @@ const isLoadingReducer = (state = false, action) => {
 
 export default combineReducers({
   searchResults: searchResultsReducer,
-  isLoading: isLoadingReducer
+  isLoading: isLoadingReducer,
+  resultInfo: resultInfoReducer
 })

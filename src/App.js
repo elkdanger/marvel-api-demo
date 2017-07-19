@@ -3,7 +3,8 @@ import logo from './img/marvel.png'
 import { connect } from 'react-redux'
 import './App.css'
 import Search from './Search'
-import SearchResuls from './SearchResults'
+import SearchResults from './SearchResults'
+import ResultSummary from './ResultSummary'
 import Spinner from 'react-spinkit'
 
 const mapStateToProps = state => ({
@@ -28,7 +29,10 @@ class App extends React.Component {
           </div>
         </div>
         <div className="row">
-          <SearchResuls />
+          <div className="col-sm-12">
+            <ResultSummary />
+            <SearchResults />
+          </div>
         </div>
       </div>
     )
