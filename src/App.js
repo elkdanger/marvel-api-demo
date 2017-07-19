@@ -1,33 +1,38 @@
 import * as React from 'react'
 import logo from './img/marvel.png'
-import { Provider } from 'react-redux'
-import store from './data/store'
+import { connect } from 'react-redux'
 import './App.css'
 import Search from './Search'
 import SearchResuls from './SearchResults'
+import Spinner from 'react-spinkit'
 
-export class App extends React.Component {
+const mapStateToProps = state => ({
+  isLoading: state.isLoading
+})
+
+class App extends React.Component {
   render() {
     return (
-      <Provider store={store}>
-        <div className="container">
-          <div className="row header">
-            <div className="col-sm-7">
-              <img src={logo} alt="Marvel" />
-              <h1>
-                <span className="visually-hidden">Marvel</span> character
-                browser
-              </h1>
-            </div>
-            <div className="col-sm-5">
-              <Search />
-            </div>
+      <div className="container">
+        <div className="row header">
+          <div className="col-sm-7">
+            <img src={logo} alt="Marvel" />
+            <h1>
+              <span className="visually-hidden">Marvel</span> character browser
+              {this.props.isLoading &&
+                <Spinner name="cube-grid" color="white" fadeIn="none" />}
+            </h1>
           </div>
-          <div className="row">
-            <SearchResuls />
+          <div className="col-sm-5">
+            <Search />
           </div>
         </div>
-      </Provider>
+        <div className="row">
+          <SearchResuls />
+        </div>
+      </div>
     )
   }
 }
+
+export default connect(mapStateToProps)(App)

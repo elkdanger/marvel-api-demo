@@ -26,6 +26,13 @@
   word-wrap: normal;
 }
 
+.sk-spinner {
+  width: 14px !important;
+  height: 14px !important;
+  margin-left: 10px;
+  display: inline-block;
+}
+
 @media (max-width: 337px) {
   .header img {
     width: 25%;
