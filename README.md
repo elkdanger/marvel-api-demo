@@ -31,3 +31,6 @@ The application has been tested on:
 - Microsoft Edge 38
 - Firefox 52
 - Brave Mobile (Android)
+
+## Preview
+![App screenshot](doc/app_screenshot.png)
