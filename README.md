@@ -2,6 +2,8 @@
 
 A single-page JavaScript app to demonstrate connectivity with the Marvel API, built using React and Redux. The application is based on the [create-react-app](https://github.com/facebookincubator/create-react-app) starter kit.
 
+[View the live demo](https://marvel.elkdanger.co.uk)
+
 ## Prerequisites
 
 - NodeJS >= 6.x
