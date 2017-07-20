@@ -18,7 +18,15 @@ Clone this repository and run `$ yarn install` (or `$ npm install`) from the com
 
 Your public API key for the Marvel API must be supplied as an environment variable `REACT_APP_API_KEY` for the application to work.
 
-To start the application, run `$ REACT_APP_API_KEY=<api key> yarn start` (or `$ REACT_APP_API_KEY=<api key> npm start`) to begin running the application on port 3000, where `<api key>` is your public API key for the Marvel API.
+To start the application on port 3000, run:
+
+`$ REACT_APP_API_KEY=<api key> yarn start`
+
+or if using npm: 
+
+`$ REACT_APP_API_KEY=<api key> npm start`
+
+where `<api key>` is your public API key for the Marvel API.
 
 ## Testing the app
 
