@@ -6,7 +6,7 @@ const mapStateToProps = state => ({
   resultInfo: state.resultInfo
 })
 
-const characterWord = count => (count == 1 ? 'character' : 'characters')
+const characterWord = count => (count === 1 ? 'character' : 'characters')
 
 const ResultSummary = props => {
   if (props.resultInfo.total !== undefined) {

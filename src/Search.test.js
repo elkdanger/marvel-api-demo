@@ -11,7 +11,7 @@ it('checks the component against a snapshot', () => {
   expect(tree).toMatchSnapshot()
 })
 
-it('can render the component', () => {
+it('can render the component with the correct initial state', () => {
   const component = shallow(<SearchComponent />)
 
   expect(component.state().isDirty).toBe(false)

@@ -7,8 +7,6 @@ const mapStateToProps = state => ({
   data: state.searchResults
 })
 
-const masonryOptions = {}
-
 const thumbUrl = item => {
   return `${item.thumbnail.path}/portrait_xlarge.${item.thumbnail.extension}`
 }
@@ -17,7 +15,7 @@ export class SearchResultsComponent extends React.Component {
   render() {
     const items = this.props.data.map(d =>
       <div className="character-container">
-        <img src={thumbUrl(d)} />
+        <img src={thumbUrl(d)} alt={'Image for ' + d.name} />
         <div className="character-info">
           {d.name}
         </div>

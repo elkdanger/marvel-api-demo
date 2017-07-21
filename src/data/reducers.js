@@ -20,7 +20,7 @@ const resultInfoReducer = (state = {}, action) => {
 }
 
 const isLoadingReducer = (state = false, action) => {
-  if (action && action.type == Constants.LOADING_INDICATOR) {
+  if (action && action.type === Constants.LOADING_INDICATOR) {
     return action.isLoading
   }
 
