@@ -6,7 +6,7 @@ A single-page JavaScript app to demonstrate connectivity with the Marvel API, bu
 
 ## Prerequisites
 
-- NodeJS >= 6.x
+- NodeJS >= 4.x
 - [yarn](https://yarnpkg.com/en/) or npm
 - An API key for [the Marvel API](https://developer.marvel.com)
 
