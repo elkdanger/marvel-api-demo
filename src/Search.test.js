@@ -1,6 +1,15 @@
 import * as React from 'react'
 import { shallow } from 'enzyme'
+import { create } from 'react-test-renderer'
 import { SearchComponent } from './Search'
+
+it('checks the component against a snapshot', () => {
+  const renderer = create(<SearchComponent />)
+
+  const tree = renderer.toJSON()
+
+  expect(tree).toMatchSnapshot()
+})
 
 it('can render the component', () => {
   const component = shallow(<SearchComponent />)
